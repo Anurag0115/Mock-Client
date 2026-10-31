@@ -1,0 +1,347 @@
+What is Tableau?
+Answer: Tableau is a Business Intelligence and data visualisation tool used to analyse data and create interactive dashboards and reports.
+
+
+
+What are Dimensions in Tableau?
+Answer: Dimensions are qualitative fields used to categorise, group and segment data, such as Region, Category and Customer Name.
+
+
+
+What are Measures in Tableau?
+Answer: Measures are quantitative fields that can be aggregated, such as Sales, Profit and Quantity.
+
+
+
+What is the difference between Dimensions and Measures?
+Answer: Dimensions describe data, whereas Measures represent numerical values that can be aggregated.
+
+
+
+What is the difference between Discrete and Continuous fields?
+Answer: Discrete fields create separate headers, whereas Continuous fields create continuous axes.
+
+
+
+What is a Calculated Field?
+Answer: A Calculated Field is a custom formula created to derive new values using existing data.
+
+
+
+What is an Aggregate Function in Tableau?
+Answer: An Aggregate Function summarises multiple records into a single value using functions such as SUM, AVG, MIN and MAX.
+
+
+
+What is the difference between SUM and AVG?
+Answer: SUM calculates the total of values, whereas AVG calculates their average.
+
+
+
+What is a Filter in Tableau?
+Answer: A Filter restricts the data displayed in a worksheet or dashboard based on specified conditions.
+
+
+
+What are the different types of Filters in Tableau?
+Answer: Extract Filters, Data Source Filters, Context Filters, Dimension Filters, Measure Filters and Table Calculation Filters.
+
+
+
+What is a Context Filter?
+Answer: A Context Filter creates a primary filtering context that other dimension filters can use as a reference.
+
+
+
+What is the difference between Context Filter and Dimension Filter?
+Answer: Context Filters are evaluated before regular dimension filters and establish a filtered data context.
+
+
+
+What is a Measure Filter?
+Answer: A Measure Filter filters data based on aggregated numerical values, such as SUM(Sales) greater than 10,000.
+
+
+
+What is an Extract Filter?
+Answer: An Extract Filter limits the data included when creating a Tableau extract.
+
+
+
+What is a Table Calculation?
+Answer: A Table Calculation performs calculations on the results already present in a visualisation, such as Running Total and Percent of Total.
+
+
+
+What is a Level of Detail (LOD) Expression?
+Answer: LOD Expressions control the level of granularity at which a calculation is performed, independently of the visualisation's displayed level of detail.
+
+
+
+What are the three types of LOD Expressions?
+Answer: FIXED, INCLUDE and EXCLUDE.
+
+
+
+What is FIXED LOD?
+Answer: FIXED LOD calculates values at a specified dimension level, independent of the dimensions in the visualisation.
+
+
+
+What is INCLUDE LOD?
+Answer: INCLUDE LOD adds specified dimensions to the visualisation's level of detail for performing calculations.
+
+
+
+What is EXCLUDE LOD?
+Answer: EXCLUDE LOD removes specified dimensions from the visualisation's level of detail for performing calculations.
+
+
+
+What is the difference between FIXED, INCLUDE and EXCLUDE?
+Answer: FIXED specifies an independent level of detail, INCLUDE adds dimensions and EXCLUDE removes dimensions from the view's level of detail.
+
+
+
+What is the syntax of FIXED LOD?
+Answer: { FIXED [Dimension] : AGGREGATE([Measure]) }.
+
+
+
+What is the syntax of INCLUDE LOD?
+Answer: { INCLUDE [Dimension] : AGGREGATE([Measure]) }.
+
+
+
+What is the syntax of EXCLUDE LOD?
+Answer: { EXCLUDE [Dimension] : AGGREGATE([Measure]) }.
+
+
+
+How do you calculate total sales irrespective of Region?
+Answer: Use { FIXED : SUM([Sales]) } to calculate overall sales independent of the dimensions in the view.
+
+
+
+How do you calculate customer-level sales?
+Answer: Use { FIXED [Customer Name] : SUM([Sales]) }.
+
+
+
+How do you calculate average sales per customer?
+Answer: Use { FIXED [Customer Name] : AVG([Sales]) } to calculate the average order-level sales for each customer.
+
+
+
+How do you calculate total sales by Category irrespective of Sub-Category?
+Answer: Use { EXCLUDE [Sub-Category] : SUM([Sales]) }.
+
+
+
+How do you calculate customer sales including an additional City dimension?
+Answer: Use { INCLUDE [City] : SUM([Sales]) }.
+
+
+
+What is the difference between LOD and Table Calculations?
+Answer: LOD expressions calculate at a specified data granularity, whereas Table Calculations operate on the aggregated results in the visualisation.
+
+
+
+What is the order of operations in Tableau?
+Answer: Tableau follows a defined query execution sequence involving extract, data source, context, dimension, measure and table calculation filters.
+
+
+
+How does FIXED LOD interact with filters?
+Answer: FIXED LOD is evaluated before ordinary dimension filters, but after extract, data source and context filters.
+
+
+
+How do you make a FIXED LOD respond to a dimension filter?
+Answer: Add the dimension filter to Context so it is applied before the FIXED LOD calculation.
+
+
+
+What is a Dashboard in Tableau?
+Answer: A Dashboard combines multiple worksheets and objects into a single interactive view.
+
+
+
+What is a Story in Tableau?
+Answer: A Story is a sequence of worksheets or dashboards arranged to communicate insights through a narrative.
+
+
+
+What is a Dashboard Action?
+Answer: A Dashboard Action allows users to interact with one visualisation and dynamically affect another visualisation or dashboard element.
+
+
+
+What are the different types of Dashboard Actions?
+Answer: Filter Actions, Highlight Actions, URL Actions, Go to Sheet Actions, Change Parameter Actions and Change Set Values Actions.
+
+
+
+What is a Filter Action?
+Answer: A Filter Action uses selections in one worksheet to filter data in another worksheet.
+
+
+
+What is a Highlight Action?
+Answer: A Highlight Action highlights related data points without removing the remaining data from the view.
+
+
+
+What is a URL Action?
+Answer: A URL Action opens an external webpage or web application based on a user interaction.
+
+
+
+What is a Go to Sheet Action?
+Answer: A Go to Sheet Action navigates users from one worksheet or dashboard to another.
+
+
+
+What is a Change Parameter Action?
+Answer: A Change Parameter Action dynamically updates a parameter based on a user's selection.
+
+
+
+What is a Change Set Values Action?
+Answer: A Change Set Values Action dynamically changes the members of a set based on user selections.
+
+
+
+What is the difference between Filter Action and Highlight Action?
+Answer: Filter Action removes non-matching records from the target view, whereas Highlight Action visually emphasises matching records.
+
+
+
+What is a Parameter in Tableau?
+Answer: A Parameter is a user-controlled variable that can be used in calculations, filters and dashboard actions.
+
+
+
+What is the difference between Parameter and Filter?
+Answer: A Filter directly restricts data, whereas a Parameter stores a user-selected value that can influence calculations and views.
+
+
+
+What is a Set in Tableau?
+Answer: A Set is a custom subset of data members based on defined conditions or manual selections.
+
+
+
+What is the difference between Set and Group?
+Answer: A Set divides data into IN and OUT members, whereas a Group combines selected members into a single category.
+
+
+
+What is a Hierarchy in Tableau?
+Answer: A Hierarchy organises dimensions into multiple levels, such as Country → State → City.
+
+
+
+What is Data Blending?
+Answer: Data Blending combines data from different data sources using common linking fields at an aggregated level.
+
+
+
+What is the difference between Join and Data Blending?
+Answer: Joins combine tables at the row level, whereas Data Blending combines aggregated results from separate data sources.
+
+
+
+What is a Relationship in Tableau?
+Answer: A Relationship is a logical connection between tables that allows Tableau to generate queries based on the fields used in a visualisation.
+
+
+
+What is the difference between Relationship and Join?
+Answer: Relationships preserve the logical table structures and determine joins dynamically, whereas joins physically combine tables into a single logical table.
+
+
+
+What are the different types of Joins in Tableau?
+Answer: Inner Join, Left Join, Right Join and Full Outer Join.
+
+
+
+What is a Dual Axis Chart?
+Answer: A Dual Axis Chart displays two different measures using separate axes in the same visualisation.
+
+
+
+What is a Combined Axis Chart?
+Answer: A Combined Axis Chart displays multiple measures using the same axis.
+
+
+
+What is a Running Total in Tableau?
+Answer: A Running Total calculates cumulative values across the rows or columns in a visualisation.
+
+
+
+What is a Moving Average?
+Answer: A Moving Average calculates the average of values over a specified rolling period.
+
+
+
+What is the difference between INDEX and RANK in Tableau?
+Answer: INDEX returns the sequential position of a row in the partition, whereas RANK assigns rankings based on measure values.
+
+
+
+What is LOOKUP in Tableau?
+Answer: LOOKUP returns the value of an expression from another row based on a relative offset.
+
+
+
+What is WINDOW_SUM?
+Answer: WINDOW_SUM calculates the sum of an expression across a specified window of rows.
+
+
+
+What is WINDOW_AVG?
+Answer: WINDOW_AVG calculates the average of an expression across a specified window of rows.
+
+
+
+What is ATTR in Tableau?
+Answer: ATTR returns a value when all underlying records have the same value; otherwise, it displays an asterisk.
+
+
+
+What is the difference between COUNT and COUNTD?
+Answer: COUNT counts non-null records, whereas COUNTD counts distinct non-null values.
+
+
+
+What is Data Densification?
+Answer: Data Densification generates additional marks for missing combinations or dates in certain visualisations to support analytical calculations.
+
+
+
+What is a Reference Line?
+Answer: A Reference Line displays a benchmark such as average, median or target value in a chart.
+
+
+
+What is a Bins field?
+Answer: Bins group continuous numerical values into equal-sized intervals for distribution analysis.
+
+
+
+What is a Forecast in Tableau?
+Answer: Forecasting uses historical time-series data to estimate future values.
+
+
+
+What is Tableau Extract?
+Answer: A Tableau Extract is a snapshot of data stored in Tableau's optimised extract format, typically Hyper.
+
+
+
+What is the difference between Live Connection and Extract Connection?
+Answer: Live Connection queries the underlying data source, whereas Extract Connection uses a stored snapshot of data.

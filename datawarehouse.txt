@@ -1,0 +1,179 @@
+1. What is a Data Warehouse?
+Answer: A Data Warehouse is a centralised repository used to store historical data from multiple sources for reporting and analysis.
+
+2. What are the main characteristics of a Data Warehouse?
+Answer: Subject-oriented, Integrated, Time-variant and Non-volatile.
+
+3. What is OLTP?
+Answer: OLTP (Online Transaction Processing) handles day-to-day transactional operations such as INSERT, UPDATE and DELETE.
+
+4. What is OLAP?
+Answer: OLAP (Online Analytical Processing) supports complex queries and analytical reporting on large volumes of data.
+
+5. What is the difference between OLTP and OLAP?
+Answer: OLTP handles daily transactions, whereas OLAP is designed for analytical queries and decision-making.
+
+6. What is ETL?
+Answer: ETL stands for Extract, Transform and Load, which moves data from source systems into a target system.
+
+7. What is ELT?
+Answer: ELT stands for Extract, Load and Transform, where data is transformed after loading into the target platform.
+
+8. What is the difference between ETL and ELT?
+Answer: ETL transforms data before loading, whereas ELT loads data first and transforms it inside the target system.
+
+9. What is a Data Mart?
+Answer: A Data Mart is a smaller data repository designed for a specific business department, such as Sales or Finance.
+
+10. What is a Staging Area?
+Answer: A Staging Area is a temporary storage location where source data is collected before transformation and loading.
+
+11. What is Metadata?
+Answer: Metadata is data about data, describing its structure, meaning, source and format.
+
+12. What is a Data Lake?
+Answer: A Data Lake stores large amounts of raw structured, semi-structured and unstructured data.
+
+13. What is the difference between a Data Lake and a Data Warehouse?
+Answer: A Data Lake stores raw data in different formats, whereas a Data Warehouse stores structured and processed data for analytics.
+
+14. What is a Fact Table?
+Answer: A Fact Table stores measurable business data such as Sales, Quantity, Revenue and Profit.
+
+15. What is a Dimension Table?
+Answer: A Dimension Table stores descriptive business information such as Customer, Product, Date and Location.
+
+16. What is a Star Schema?
+Answer: A Star Schema is a dimensional model where a central fact table connects directly to multiple dimension tables.
+
+17. What is a Snowflake Schema?
+Answer: A Snowflake Schema is a dimensional model where dimension tables are further normalised into related tables.
+
+18. What is the difference between Star Schema and Snowflake Schema?
+Answer: Star Schema uses denormalised dimensions, whereas Snowflake Schema uses normalised dimensions.
+
+19. What is a Galaxy Schema?
+Answer: A Galaxy Schema, also called a Fact Constellation Schema, contains multiple fact tables sharing common dimensions.
+
+20. What is a Grain in Data Modelling?
+Answer: Grain defines the level of detail represented by each row in a fact table.
+
+21. Why is defining grain important?
+Answer: Grain ensures that every fact table row has a clearly defined business meaning and prevents incorrect aggregation.
+
+22. What is a Surrogate Key?
+Answer: A Surrogate Key is a system-generated unique identifier used as a primary key in a dimension table.
+
+23. What is a Natural Key?
+Answer: A Natural Key is a business-generated identifier, such as Customer ID or Employee ID.
+
+24. What is the difference between Surrogate Key and Natural Key?
+Answer: A Surrogate Key is system-generated, whereas a Natural Key comes from the source business system.
+
+25. What is a Primary Key in Data Modelling?
+Answer: A Primary Key uniquely identifies each record in a table.
+
+26. What is a Foreign Key?
+Answer: A Foreign Key connects one table to another by referencing a primary or unique key.
+
+27. What is a Measure?
+Answer: A Measure is a numerical value in a fact table that can be analysed, such as Sales, Profit or Quantity.
+
+28. What is a Dimension Attribute?
+Answer: A Dimension Attribute is a descriptive column used to filter, group or analyse data.
+
+29. What is a Degenerate Dimension?
+Answer: A Degenerate Dimension is a dimension attribute stored directly in the fact table without a separate dimension table, such as Order Number.
+
+30. What is a Conformed Dimension?
+Answer: A Conformed Dimension is a shared dimension used consistently across multiple fact tables or data marts.
+
+31. What is a Role-Playing Dimension?
+Answer: A Role-Playing Dimension is one dimension used multiple times for different purposes, such as Order Date and Delivery Date.
+
+32. What is a Junk Dimension?
+Answer: A Junk Dimension combines multiple low-cardinality flags and indicators into one dimension table.
+
+33. What is a Slowly Changing Dimension (SCD)?
+Answer: SCD manages historical changes in dimension attributes over time.
+
+34. What is SCD Type 1?
+Answer: SCD Type 1 overwrites old values with new values without maintaining historical records.
+
+35. What is SCD Type 2?
+Answer: SCD Type 2 creates a new dimension record to maintain complete historical changes.
+
+36. What is SCD Type 3?
+Answer: SCD Type 3 stores limited historical information using additional columns, such as Current City and Previous City.
+
+37. What is a Factless Fact Table?
+Answer: A Factless Fact Table stores business events or relationships without numerical measures.
+
+38. What are the different types of Fact Tables?
+Answer: Transaction Fact, Periodic Snapshot Fact and Accumulating Snapshot Fact.
+
+39. What is a Transaction Fact Table?
+Answer: A Transaction Fact Table stores individual business transactions, such as each sales order line.
+
+40. What is a Periodic Snapshot Fact Table?
+Answer: A Periodic Snapshot Fact Table stores measurements at regular intervals, such as daily or monthly account balances.
+
+41. What is an Accumulating Snapshot Fact Table?
+Answer: An Accumulating Snapshot Fact Table tracks a business process through multiple milestones, such as order processing and delivery.
+
+42. What is Normalisation?
+Answer: Normalisation organises data into multiple related tables to reduce redundancy and improve data integrity.
+
+43. What is Denormalisation?
+Answer: Denormalisation combines data to reduce joins and improve query performance for analytical workloads.
+
+44. What is 1NF?
+Answer: First Normal Form requires each column to contain atomic values without repeating groups.
+
+45. What is 2NF?
+Answer: Second Normal Form requires 1NF and no partial dependency on a part of a composite candidate key.
+
+46. What is 3NF?
+Answer: Third Normal Form requires 2NF and no transitive dependency of non-key attributes on candidate keys.
+
+47. What is a Composite Key?
+Answer: A Composite Key consists of two or more columns that together uniquely identify a record.
+
+48. What is Data Granularity?
+Answer: Data Granularity refers to the level of detail stored in a data warehouse.
+
+49. What is Data Cleansing?
+Answer: Data Cleansing identifies and corrects inaccurate, duplicate, missing or inconsistent data.
+
+50. What is Data Profiling?
+Answer: Data Profiling analyses source data to understand its quality, structure, completeness and consistency.
+
+51. What is Incremental Loading?
+Answer: Incremental Loading loads only new or modified records instead of reloading the entire dataset.
+
+52. What is Full Loading?
+Answer: Full Loading loads the complete dataset from the source into the target system.
+
+53. What is CDC?
+Answer: CDC (Change Data Capture) identifies and captures INSERT, UPDATE and DELETE changes from source systems.
+
+54. What is a Data Pipeline?
+Answer: A Data Pipeline is a sequence of processes that moves and transforms data from source systems to target systems.
+
+55. What is Data Lineage?
+Answer: Data Lineage tracks the origin, movement and transformation of data throughout its lifecycle.
+
+56. What is a Dimension Hierarchy?
+Answer: A Dimension Hierarchy organises dimension attributes into levels, such as Country → State → City.
+
+57. What is a Date Dimension?
+Answer: A Date Dimension contains calendar attributes such as Date, Month, Quarter, Year and Weekday.
+
+58. What is a Bridge Table?
+Answer: A Bridge Table handles complex relationships, particularly many-to-many relationships between dimensions and facts.
+
+59. What is a Many-to-Many Relationship?
+Answer: A Many-to-Many Relationship occurs when multiple records in one table relate to multiple records in another table.
+
+60. What is a Data Warehouse Bus Matrix?
+Answer: A Bus Matrix identifies business processes and the conformed dimensions shared across different fact tables.

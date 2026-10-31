@@ -1,0 +1,182 @@
+SQL Interview Questions and Answers – 60 Important Questions
+For Freshers | One-line Answers | Interview Preparation
+
+1. What is SQL?
+Answer: SQL (Structured Query Language) is used to store, retrieve, manipulate and manage data in relational databases.
+
+2. What is a database?
+Answer: A database is an organised collection of data stored electronically.
+
+3. What is a table?
+Answer: A table stores data in rows and columns.
+
+4. What is a primary key?
+Answer: A primary key uniquely identifies each record and does not allow NULL or duplicate values.
+
+5. What is a foreign key?
+Answer: A foreign key establishes a relationship between two tables by referencing a primary or unique key.
+
+6. What is the difference between WHERE and HAVING?
+Answer: WHERE filters rows before grouping, whereas HAVING filters groups after GROUP BY.
+
+7. What is the difference between DELETE, TRUNCATE and DROP?
+Answer: DELETE removes selected rows, TRUNCATE removes all rows, and DROP removes the entire table structure.
+
+8. What is NULL in SQL?
+Answer: NULL represents a missing or unknown value, not zero or an empty string.
+
+9. What is a JOIN in SQL?
+Answer: JOIN combines records from two or more tables based on a related column.
+
+10. What is INNER JOIN?
+Answer: INNER JOIN returns only matching records from both tables.
+
+11. What is LEFT JOIN?
+Answer: LEFT JOIN returns all records from the left table and matching records from the right table.
+
+12. What is RIGHT JOIN?
+Answer: RIGHT JOIN returns all records from the right table and matching records from the left table.
+
+13. What is FULL OUTER JOIN?
+Answer: FULL OUTER JOIN returns matching and non-matching records from both tables.
+
+14. What is CROSS JOIN?
+Answer: CROSS JOIN returns the Cartesian product of two tables.
+
+15. What is SELF JOIN?
+Answer: SELF JOIN joins a table with itself to compare related records within the same table.
+
+16. What is the difference between INNER JOIN and LEFT JOIN?
+Answer: INNER JOIN returns matching records only, whereas LEFT JOIN also returns unmatched left-table records.
+
+17. What is an equi join?
+Answer: An equi join uses the equality operator (=) to match records between tables.
+
+18. What is a subquery?
+Answer: A subquery is a query written inside another SQL query.
+
+19. What is a correlated subquery?
+Answer: A correlated subquery depends on values from the outer query and executes logically for each outer row.
+
+20. What is a non-correlated subquery?
+Answer: A non-correlated subquery executes independently of the outer query.
+
+21. What is the difference between IN and EXISTS?
+Answer: IN checks whether a value matches a list, whereas EXISTS checks whether the subquery returns any rows.
+
+22. What is a scalar subquery?
+Answer: A scalar subquery returns exactly one row and one column.
+
+23. Can we use a subquery in the FROM clause?
+Answer: Yes, a subquery in the FROM clause acts as a derived table.
+
+24. How do you find employees earning more than the average salary?
+Answer: Use a subquery with AVG(Salary) in the WHERE clause.
+
+25. What are set operators in SQL?
+Answer: Set operators combine the results of two or more SELECT statements.
+
+26. What is UNION?
+Answer: UNION combines results and removes duplicate records.
+
+27. What is UNION ALL?
+Answer: UNION ALL combines results without removing duplicate records.
+
+28. What is the difference between UNION and UNION ALL?
+Answer: UNION removes duplicates, whereas UNION ALL retains duplicates and is generally faster.
+
+29. What is INTERSECT?
+Answer: INTERSECT returns only the common records from both SELECT statements.
+
+30. What is MINUS or EXCEPT?
+Answer: MINUS or EXCEPT returns records from the first query that are not present in the second query.
+
+31. What are the requirements for using set operators?
+Answer: SELECT statements must have the same number of columns with compatible corresponding data types.
+
+32. What is DDL?
+Answer: DDL (Data Definition Language) defines and modifies database structures.
+
+33. What are DDL commands?
+Answer: CREATE, ALTER, DROP and TRUNCATE are commonly used DDL commands.
+
+34. What is CREATE?
+Answer: CREATE is used to create database objects such as tables, views and databases.
+
+35. What is ALTER?
+Answer: ALTER modifies the structure of an existing database object.
+
+36. What is DROP?
+Answer: DROP permanently removes a database object and its structure.
+
+37. What is DML?
+Answer: DML (Data Manipulation Language) is used to insert, update and delete records in database tables.
+
+38. What are DML commands?
+Answer: INSERT, UPDATE and DELETE are common DML commands.
+
+39. What is INSERT?
+Answer: INSERT adds new records into a table.
+
+40. What is UPDATE?
+Answer: UPDATE modifies existing records in a table.
+
+41. What is DELETE?
+Answer: DELETE removes records from a table, optionally based on a WHERE condition.
+
+42. What is DCL?
+Answer: DCL (Data Control Language) manages database access permissions and user privileges.
+
+43. What are DCL commands?
+Answer: GRANT and REVOKE are the primary DCL commands.
+
+44. What is GRANT?
+Answer: GRANT provides database permissions to users or roles.
+
+45. What is REVOKE?
+Answer: REVOKE removes previously granted database permissions.
+
+46. What is TCL?
+Answer: TCL (Transaction Control Language) manages database transactions.
+
+47. What is COMMIT?
+Answer: COMMIT permanently saves the changes made in the current transaction.
+
+48. What is ROLLBACK?
+Answer: ROLLBACK undoes uncommitted changes in the current transaction.
+
+49. What is SAVEPOINT?
+Answer: SAVEPOINT creates a point within a transaction to which we can partially roll back.
+
+50. What are ACID properties?
+Answer: ACID stands for Atomicity, Consistency, Isolation and Durability, ensuring reliable database transactions.
+
+51. How do you find duplicate records?
+Answer: Use GROUP BY with HAVING COUNT(*) > 1.
+
+52. How do you find the second-highest salary?
+Answer: Use DENSE_RANK() or a subquery with MAX().
+
+53. How do you find the highest salary in each department?
+Answer: Use GROUP BY Department with MAX(Salary), or use a window function.
+
+54. What is a view?
+Answer: A view is a virtual table based on the result of a SQL query.
+
+55. What is an index?
+Answer: An index improves data retrieval speed by providing an efficient lookup structure.
+
+56. What is the difference between CHAR and VARCHAR?
+Answer: CHAR stores fixed-length strings, whereas VARCHAR stores variable-length strings.
+
+57. What is GROUP BY?
+Answer: GROUP BY groups rows with identical values for aggregate calculations.
+
+58. What is ORDER BY?
+Answer: ORDER BY sorts query results in ascending or descending order.
+
+59. What is a window function?
+Answer: A window function performs calculations across related rows without collapsing them into one row per group.
+
+60. What is the difference between RANK, DENSE_RANK and ROW_NUMBER?
+Answer: RANK skips numbers after ties, DENSE_RANK does not skip numbers, and ROW_NUMBER assigns a unique sequential number to each row.

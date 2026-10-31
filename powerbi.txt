@@ -1,0 +1,347 @@
+What is Power BI?
+Answer: Power BI is a Microsoft Business Intelligence tool used to connect, transform, model, visualise and analyse data.
+
+
+
+What is DAX?
+Answer: DAX (Data Analysis Expressions) is a formula language used in Power BI for calculations and data analysis.
+
+
+
+What are the different types of calculations in Power BI?
+Answer: Calculated Columns, Measures and Calculated Tables are the three major types of DAX calculations.
+
+
+
+What is a Calculated Column?
+Answer: A Calculated Column creates a new column in a table by evaluating a DAX expression for every row.
+
+
+
+What is a Measure?
+Answer: A Measure is a dynamic calculation evaluated based on the current filter context of a report.
+
+
+
+What is the difference between a Calculated Column and a Measure?
+Answer: A Calculated Column is calculated row by row and stored in the model, whereas a Measure is calculated dynamically when used in a visual.
+
+
+
+What is Row Context?
+Answer: Row Context means DAX evaluates an expression for the current row of a table.
+
+
+
+What is Filter Context?
+Answer: Filter Context is the set of filters applied to a calculation through slicers, visual filters, page filters, report filters or DAX expressions.
+
+
+
+What is the difference between Row Context and Filter Context?
+Answer: Row Context evaluates calculations for the current row, whereas Filter Context determines which rows are included in a calculation.
+
+
+
+What is Context Transition?
+Answer: Context Transition converts Row Context into Filter Context, commonly performed by the CALCULATE function.
+
+
+
+What is CALCULATE in DAX?
+Answer: CALCULATE evaluates an expression after modifying or adding filter conditions.
+
+
+
+What is the difference between CALCULATE and CALCULATETABLE?
+Answer: CALCULATE returns a scalar value, whereas CALCULATETABLE returns a table after applying filter conditions.
+
+
+
+What is FILTER in DAX?
+Answer: FILTER returns a table containing only the rows that satisfy a specified condition.
+
+
+
+What is the difference between CALCULATE and FILTER?
+Answer: CALCULATE modifies filter context, whereas FILTER returns a filtered table that can be used as a filter argument.
+
+
+
+What is ALL in DAX?
+Answer: ALL removes filters from a specified table or column and returns all applicable rows or values.
+
+
+
+What is ALLEXCEPT in DAX?
+Answer: ALLEXCEPT removes all filters from a table except the filters on specified columns.
+
+
+
+What is the difference between ALL and ALLEXCEPT?
+Answer: ALL removes filters from specified tables or columns, whereas ALLEXCEPT removes all filters from a table except specified columns.
+
+
+
+What is ALLSELECTED?
+Answer: ALLSELECTED removes filters applied inside the query or visual while retaining external filters such as slicer selections.
+
+
+
+What is REMOVEFILTERS?
+Answer: REMOVEFILTERS clears filters from specified tables or columns inside CALCULATE.
+
+
+
+What is the difference between ALL and REMOVEFILTERS?
+Answer: Both can remove filters, but ALL can also return a table, whereas REMOVEFILTERS is specifically used as a filter modifier.
+
+
+
+What is KEEPFILTERS?
+Answer: KEEPFILTERS adds a filter while intersecting it with existing filters instead of replacing filters on the same columns.
+
+
+
+What is RELATED in DAX?
+Answer: RELATED retrieves a value from a related table, typically through a many-to-one relationship, in row context.
+
+
+
+What is RELATEDTABLE?
+Answer: RELATEDTABLE returns the related rows from another table, typically using the current row context.
+
+
+
+What is the difference between SUM and SUMX?
+Answer: SUM adds values from a single column, whereas SUMX evaluates an expression row by row and then sums the results.
+
+
+
+What is the difference between COUNT and COUNTA?
+Answer: COUNT counts non-blank values in supported numeric or date columns, whereas COUNTA counts non-blank values of supported data types.
+
+
+
+What is COUNTROWS?
+Answer: COUNTROWS returns the number of rows in a table or filtered table expression.
+
+
+
+What is DISTINCTCOUNT?
+Answer: DISTINCTCOUNT counts the unique values in a specified column, including BLANK as a distinct value.
+
+
+
+What is DIVIDE in DAX?
+Answer: DIVIDE performs division safely and allows an alternative result when the denominator is zero or blank.
+
+
+
+What is IF in DAX?
+Answer: IF evaluates a logical condition and returns one value when TRUE and another when FALSE.
+
+
+
+What is SWITCH in DAX?
+Answer: SWITCH evaluates an expression against multiple conditions and returns the corresponding result.
+
+
+
+What is VAR in DAX?
+Answer: VAR stores the result of an expression in a variable for reuse within a DAX calculation.
+
+
+
+What is RETURN in DAX?
+Answer: RETURN specifies the final expression or result of a DAX formula after variable declarations.
+
+
+
+What is the difference between IF and SWITCH?
+Answer: IF is suitable for conditional branching, whereas SWITCH is useful for handling multiple possible conditions or values.
+
+
+
+What is a calculated table?
+Answer: A calculated table is a new table created using a DAX expression and stored in the data model.
+
+
+
+What is a Virtual Table in DAX?
+Answer: A Virtual Table is a temporary table created during DAX evaluation using functions such as FILTER, SUMMARIZE and ADDCOLUMNS.
+
+
+
+What is SUMMARIZE?
+Answer: SUMMARIZE creates a grouped table based on specified columns and can include calculated expressions.
+
+
+
+What is ADDCOLUMNS?
+Answer: ADDCOLUMNS adds calculated columns to an existing table expression.
+
+
+
+What is SELECTEDVALUE?
+Answer: SELECTEDVALUE returns the selected value when exactly one distinct value is available; otherwise, it returns an alternate result or BLANK.
+
+
+
+What is HASONEVALUE?
+Answer: HASONEVALUE checks whether exactly one distinct value is present in the filter context for a column.
+
+
+
+What is ISFILTERED?
+Answer: ISFILTERED checks whether a column or table is directly filtered.
+
+
+
+What is USERELATIONSHIP?
+Answer: USERELATIONSHIP activates an existing inactive relationship temporarily within a calculation.
+
+
+
+What is CROSSFILTER?
+Answer: CROSSFILTER changes the cross-filter direction or disables a relationship for a specific calculation.
+
+
+
+What is the difference between a calculated column and a calculated table?
+Answer: A Calculated Column adds a column to an existing table, whereas a Calculated Table creates a new table.
+
+
+
+What is a Time Intelligence function in DAX?
+Answer: Time Intelligence functions perform date-based calculations such as YTD, MTD, QTD and previous-year comparisons.
+
+
+
+What is TOTALYTD?
+Answer: TOTALYTD calculates the year-to-date total for a specified expression.
+
+
+
+What is DATESYTD?
+Answer: DATESYTD returns a table containing dates from the beginning of the year up to the current date in context.
+
+
+
+What is SAMEPERIODLASTYEAR?
+Answer: SAMEPERIODLASTYEAR returns the corresponding dates from the previous year.
+
+
+
+What is DATEADD?
+Answer: DATEADD shifts the dates in the current context forward or backward by a specified interval.
+
+
+
+What is PREVIOUSMONTH?
+Answer: PREVIOUSMONTH returns the dates belonging to the previous month based on the current date context.
+
+
+
+What is DATESINPERIOD?
+Answer: DATESINPERIOD returns a date range based on a specified starting date, interval and number of intervals.
+
+
+
+What is RANKX?
+Answer: RANKX evaluates an expression over a table and returns the ranking of a value.
+
+
+
+What is TOPN?
+Answer: TOPN returns the top N rows from a table based on a specified expression.
+
+
+
+What is LOOKUPVALUE?
+Answer: LOOKUPVALUE retrieves a value from a table based on matching search conditions.
+
+
+
+What is COALESCE?
+Answer: COALESCE returns the first expression that is not BLANK.
+
+
+
+What is BLANK in DAX?
+Answer: BLANK represents an empty or missing value in DAX calculations.
+
+
+
+What is the difference between BLANK and 0?
+Answer: BLANK represents a missing or empty value, whereas zero is a numeric value.
+
+
+
+What is a Running Total?
+Answer: A Running Total calculates the cumulative value of a measure across a selected sequence, such as dates.
+
+
+
+What is Year-over-Year (YoY) Growth?
+Answer: YoY Growth measures the percentage change in a metric compared with the same period in the previous year.
+
+
+
+What is Month-over-Month (MoM) Growth?
+Answer: MoM Growth measures the percentage change in a metric compared with the previous month.
+
+
+
+What is a Dynamic Measure?
+Answer: A Dynamic Measure changes its calculation or displayed result based on slicers, selections or other filter conditions.
+
+
+
+What is the difference between a Measure and an Implicit Measure?
+Answer: An Explicit Measure is created using a DAX formula, whereas an Implicit Measure is automatically generated when a numeric column is aggregated in a visual.
+
+
+
+What is a Date Table?
+Answer: A Date Table is a dedicated calendar table containing continuous dates and attributes such as Year, Quarter, Month and Day.
+
+
+
+Why do we mark a Date Table in Power BI?
+Answer: Marking a Date Table identifies the official date column for consistent time intelligence calculations.
+
+
+
+What is bidirectional filtering?
+Answer: Bidirectional filtering allows filters to propagate in both directions between related tables.
+
+
+
+What is an inactive relationship?
+Answer: An inactive relationship exists between tables but does not automatically propagate filters until activated using USERELATIONSHIP.
+
+
+
+What is the difference between a measure and a calculated column in terms of storage?
+Answer: Calculated Columns consume model storage, whereas Measures store their definitions and calculate results when queried.
+
+
+
+What is an iterator function in DAX?
+Answer: An iterator function evaluates an expression row by row over a table, such as SUMX, AVERAGEX and MAXX.
+
+
+
+What is the difference between SUMX and AVERAGEX?
+Answer: SUMX adds the evaluated row-level results, whereas AVERAGEX calculates their average.
+
+
+
+What is the difference between ALLSELECTED and REMOVEFILTERS?
+Answer: ALLSELECTED preserves relevant external selections, whereas REMOVEFILTERS clears specified filters.
+
+
+
+What is the difference between a row context and a context transition in a calculated column?
+Answer: A calculated column has row context, and using CALCULATE can convert that row context into filter context.

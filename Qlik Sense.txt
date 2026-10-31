@@ -1,0 +1,347 @@
+What is Qlik Sense?
+Answer: Qlik Sense is a Business Intelligence and data visualisation platform used to analyse data and create interactive dashboards.
+
+
+
+What is an Associative Engine in Qlik Sense?
+Answer: The Associative Engine allows users to explore relationships between data through selections and associations across tables.
+
+
+
+What is the difference between Qlik Sense and Power BI?
+Answer: Qlik Sense uses an associative data model, whereas Power BI primarily uses a relationship-based semantic model.
+
+
+
+What is a QVD file?
+Answer: QVD (QlikView Data) is a proprietary Qlik file format used to store data efficiently for faster loading and reuse.
+
+
+
+What is a Resident Load?
+Answer: Resident Load loads data from an already loaded table in the Qlik data model.
+
+
+
+What is a Preceding Load?
+Answer: Preceding Load allows data transformations to be performed through multiple LOAD statements in a single data-loading process.
+
+
+
+What is the difference between JOIN and KEEP in Qlik?
+Answer: JOIN combines tables into one table, whereas KEEP reduces tables based on common field values while retaining separate tables.
+
+
+
+What is Mapping Load?
+Answer: Mapping Load creates a temporary mapping table used to replace values using ApplyMap().
+
+
+
+What is ApplyMap()?
+Answer: ApplyMap() retrieves a corresponding value from a mapping table based on a lookup key.
+
+
+
+What is Concatenate in Qlik Sense?
+Answer: Concatenate appends records from one table to another table with compatible fields.
+
+
+
+What is Set Analysis in Qlik Sense?
+Answer: Set Analysis allows calculations to be performed on a defined set of records independently of or in addition to current selections.
+
+
+
+Why do we use Set Analysis?
+Answer: Set Analysis helps calculate values based on specific conditions, ignoring selections or comparing different selection states.
+
+
+
+What is the syntax of Set Analysis?
+Answer: The general syntax is Aggregation({SetExpression} Field).
+
+
+
+What is the default set identifier in Qlik Sense?
+Answer: $ represents the current selection state.
+
+
+
+What does {1} represent in Set Analysis?
+Answer: {1} represents the entire data set, ignoring current selections.
+
+
+
+What does {$} represent?
+Answer: {$} represents the current selection state and is the default selection identifier.
+
+
+
+What does $1 represent in Set Analysis?
+Answer: $1 represents the previous selection state.
+
+
+
+What does $_1 represent?
+Answer: $_1 represents the next selection state in Qlik's selection history, when available.
+
+
+
+What is a Set Modifier?
+Answer: A Set Modifier specifies conditions on fields to modify the records included in a set expression.
+
+
+
+What is the syntax of a Set Modifier?
+Answer: The syntax is {<FieldName={Value}>}.
+
+
+
+How do you calculate sales for the East Region irrespective of current Region selection?
+Answer: Use Sum({<Region={'East'}>} Sales).
+
+
+
+How do you calculate total sales ignoring all user selections?
+Answer: Use Sum({1} Sales).
+
+
+
+How do you ignore only the Region selection?
+Answer: Use Sum({<Region=>} Sales).
+
+
+
+What is the difference between {1} and <Region=>?
+Answer: {1} ignores all current selections, whereas <Region=> ignores only the Region selection.
+
+
+
+How do you calculate sales for the Furniture category?
+Answer: Use Sum({<Category={'Furniture'}>} Sales).
+
+
+
+How do you calculate sales for East Region and Furniture Category?
+Answer: Use Sum({<Region={'East'}, Category={'Furniture'}>} Sales).
+
+
+
+How do you calculate sales for East OR West Region?
+Answer: Use Sum({<Region={'East','West'}>} Sales).
+
+
+
+How do you exclude the West Region?
+Answer: Use Sum({<Region-={'West'}>} Sales).
+
+
+
+What is the difference between = and -= in Set Analysis?
+Answer: = assigns or replaces the selection for a field, whereas -= removes specified values from the current selection.
+
+
+
+How do you calculate sales for the current year?
+Answer: Use Sum({<Year={$(=Max(Year))}>} Sales).
+
+
+
+What is Dollar-Sign Expansion?
+Answer: Dollar-Sign Expansion evaluates an expression or variable and inserts its result into another expression.
+
+
+
+What is the syntax of Dollar-Sign Expansion?
+Answer: The syntax is $(Expression) or $(VariableName).
+
+
+
+What is the difference between SET and LET in Qlik scripting?
+Answer: SET assigns the literal text to a variable, whereas LET evaluates the expression before assigning its result.
+
+
+
+What is an Alternate State?
+Answer: An Alternate State allows users to create independent selection states for comparing different selections in the same application.
+
+
+
+Why do we use Alternate States?
+Answer: Alternate States allow users to compare different selections, such as East Region versus West Region, simultaneously.
+
+
+
+How do you calculate sales using Alternate State A?
+Answer: Use Sum({StateA} Sales).
+
+
+
+How do you display the selected Region from Alternate State A in a chart title?
+Answer: Use GetFieldSelections({StateA} Region).
+
+
+
+What is the difference between Set Analysis and Alternate States?
+Answer: Set Analysis defines the data included in an expression, whereas Alternate States maintain independent selection environments.
+
+
+
+What is P() in Set Analysis?
+Answer: P() returns the possible values of a field based on the specified set.
+
+
+
+What is E() in Set Analysis?
+Answer: E() returns the excluded values of a field based on the specified set.
+
+
+
+What is the difference between P() and E()?
+Answer: P() returns possible field values, whereas E() returns excluded field values.
+
+
+
+What are Set Operators in Qlik Sense?
+Answer: Set Operators combine sets using union (+), exclusion (-), intersection (*) and symmetric difference (/).
+
+
+
+What is the union operator (+)?
+Answer: The union operator combines records from two sets.
+
+
+
+What is the intersection operator (*)?
+Answer: The intersection operator returns only records common to both sets.
+
+
+
+What is the exclusion operator (-)?
+Answer: The exclusion operator returns records present in the first set but not in the second set.
+
+
+
+What is the symmetric difference operator (/)?
+Answer: The symmetric difference operator returns records belonging to either set but not both.
+
+
+
+What is Aggr() in Qlik Sense?
+Answer: Aggr() creates a virtual grouped table and performs calculations at a specified dimension level.
+
+
+
+What is the difference between Sum() and Aggr()?
+Answer: Sum() aggregates values directly, whereas Aggr() creates intermediate grouped results for further calculations.
+
+
+
+What is Above() in Qlik Sense?
+Answer: Above() retrieves the value of an expression from a row above the current row in a chart.
+
+
+
+What is RangeSum()?
+Answer: RangeSum() calculates the sum of a range of values or expressions.
+
+
+
+What is the difference between RangeSum() and Sum()?
+Answer: Sum() aggregates field values across records, whereas RangeSum() sums a range of expression results.
+
+
+
+What is TOTAL in Qlik Sense?
+Answer: TOTAL ignores chart dimensions when calculating an aggregation, subject to applicable selections.
+
+
+
+What is the difference between Sum(Sales) and Sum(TOTAL Sales)?
+Answer: Sum(Sales) respects chart dimensions, whereas Sum(TOTAL Sales) calculates the total across chart dimensions.
+
+
+
+What is Rank() in Qlik Sense?
+Answer: Rank() returns the ranking of an expression within a chart's dimensional context.
+
+
+
+What is Match() in Qlik Sense?
+Answer: Match() performs a case-sensitive comparison and returns the position of a matching value.
+
+
+
+What is WildMatch()?
+Answer: WildMatch() performs pattern matching using wildcard characters such as * and ?.
+
+
+
+What is Pick() in Qlik Sense?
+Answer: Pick() returns an expression from a list based on a specified position.
+
+
+
+What is If() in Qlik Sense?
+Answer: If() evaluates a condition and returns one result when TRUE and another when FALSE.
+
+
+
+What is the difference between DISTINCT and NODISTINCT in Aggr()?
+Answer: DISTINCT creates one result per unique dimensional combination, whereas NODISTINCT can retain repeated results at the underlying row level.
+
+
+
+What is a Master Measure?
+Answer: A Master Measure is a reusable predefined calculation that can be used across multiple visualisations.
+
+
+
+What is a Master Dimension?
+Answer: A Master Dimension is a reusable predefined dimension used across multiple visualisations.
+
+
+
+What is a Variable Input?
+Answer: Variable Input is an interface control that allows users to change variable values interactively.
+
+
+
+What is a Dynamic Dimension?
+Answer: A Dynamic Dimension changes the dimension used in a visualisation based on a variable or user selection.
+
+
+
+What is a Circular Reference in Qlik?
+Answer: A Circular Reference occurs when tables have multiple association paths that create ambiguous relationships.
+
+
+
+What is a Synthetic Key?
+Answer: A Synthetic Key is automatically generated by Qlik when two or more tables share multiple common fields.
+
+
+
+What is an Associative Data Model?
+Answer: An Associative Data Model connects tables through common fields and allows interactive data exploration.
+
+
+
+What is Incremental Load?
+Answer: Incremental Load loads only new or changed records instead of reloading the entire dataset.
+
+
+
+What is a Binary Load?
+Answer: Binary Load loads the data model from an existing Qlik application into another Qlik application.
+
+
+
+What is a Section Access?
+Answer: Section Access implements data reduction and access control based on user identity and security rules.
+
+
+
+What is the difference between Section Access and Set Analysis?
+Answer: Section Access controls which data users are authorised to see, whereas Set Analysis controls the records included in a calculati

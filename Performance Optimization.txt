@@ -1,0 +1,126 @@
+How to improve dashboard performance in Tableau, Qlik Sense and Power BI
+
+“ I improve dashboard performance by optimising the data model, reducing unnecessary data, simplifying calculations, limiting visuals, using efficient filters and optimising data refresh and query execution.”
+
+1. Common performance improvement techniques
+1. Remove unnecessary columns and rows from the source.
+2. Use aggregated data wherever detailed data is not required.
+3. Avoid unnecessary calculated fields and complex expressions.
+4. Use a proper Star Schema with fact and dimension tables.
+5. Avoid many-to-many relationships unless required.
+6. Reduce the number of visuals on a single dashboard page.
+7. Avoid unnecessary filters and slicers.
+8. Use efficient joins and avoid duplicate records.
+9. Implement incremental refresh or incremental data loading.
+10. Measure performance using the tool's built-in performance analysis features.
+
+
+Tableau – Performance optimization
+1. Use Extract instead of Live: Use Hyper extracts when real-time data is not required.
+2. Reduce data volume: Apply extract filters and data source filters to load only required records.
+3. Hide unused columns: Remove unnecessary fields before creating extracts.
+4. Reduce marks: Avoid displaying thousands of unnecessary data points in charts.
+5. Limit dashboard worksheets: Avoid putting too many charts on one dashboard.
+6. Reduce quick filters: Too many filters can generate additional queries.
+7. Use Apply button: Allow users to select multiple filter values and execute the query once.
+8. Optimise calculations: Avoid deeply nested calculations and unnecessary table calculations.
+9. Optimise LOD expressions: Avoid unnecessarily detailed FIXED, INCLUDE and EXCLUDE calculations.
+10. Use database calculations: Push complex row-level calculations to SQL or the database when appropriate.
+11. Avoid unnecessary COUNTD: Distinct count calculations can be expensive on large datasets.
+12. Use dashboard actions: Use filter actions to guide users from summary to detailed views instead of displaying everything together.
+13. Remove unused worksheets: Delete unused sheets, fields and data sources.
+How to identify performance issues:
+- Performance Recording: Help → Settings and Performance → Start Performance Recording.
+- Workbook Optimizer: Check workbook design recommendations.
+- Identify whether the problem is query execution, calculation, connection or rendering.
+Official references: 
+Tableau+2
+
+Qlik Sense – Performance optimization
+1. Use QVD files: Store transformed data in QVD files for faster loading.
+2. Use optimized QVD loading: Avoid transformations during the load when you want optimized QVD loading.
+3. Remove synthetic keys: Avoid multiple common fields between tables unless intentionally designed.
+4. Remove circular references: Design a clean associative data model.
+5. Use a star schema: Keep fact and dimension tables structured properly.
+6. Reduce data volume: Load only required fields and records.
+7. Pre-aggregate data: Aggregate data in the load script when users do not need transaction-level details.
+8. Avoid unnecessary IF expressions: Especially inside aggregation functions.
+9. Prefer Set Analysis: Use Set Analysis instead of row-by-row IF conditions where the logic allows it.
+10. Simplify chart expressions: Avoid complex nested IF, Aggr and calculated dimensions where possible.
+11. Reduce table columns: Avoid displaying too many dimensions and measures in straight tables.
+12. Use mapping loads: Use ApplyMap() for simple lookup transformations instead of unnecessary joins.
+13. Avoid unnecessary joins: Use associations between tables when appropriate.
+14. Optimise reload scripts: Use incremental loading for large datasets when suitable.
+15. Reduce objects per sheet: Too many charts and objects can affect sheet rendering.
+Example: IF vs Set Analysis
+
+Less efficient for a large dataset:
+Sum(If(Region = 'East', Sales))
+
+
+Often more efficient:
+Sum({<Region={'East'}>} Sales)
+
+
+How to identify performance issues:
+- Use Qlik Sense App Performance Evaluation.
+- Inspect the Data Model Viewer for synthetic keys and circular references.
+- Check reload time, app size, chart response time and memory usage.
+Official references: 
+Qlik Help+2
+
+
+Power BI – Performance optimization
+1. Use Star Schema: Separate fact and dimension tables.
+2. Reduce data volume: Remove unnecessary rows and columns in Power Query.
+3. Use Import mode: Prefer Import mode when real-time data is not required and the dataset fits available capacity.
+4. Use DirectQuery carefully: DirectQuery performance depends heavily on the underlying database and query design.
+5. Enable Query Folding: Push Power Query transformations back to the source database wherever possible.
+6. Use Incremental Refresh: Refresh only recent or changed data instead of the entire historical dataset.
+7. Optimise DAX: Avoid unnecessarily complex calculations and nested iterators.
+8. Use variables: Store intermediate results using VAR and reuse them.
+9. Avoid unnecessary FILTER: Prefer Boolean filter arguments in CALCULATE when appropriate.
+10. Avoid unnecessary calculated columns: Use measures when the calculation needs to respond dynamically to filters.
+11. Optimise relationships: Prefer one-to-many relationships and avoid unnecessary bidirectional filtering.
+12. Reduce visuals: Avoid too many visuals on one report page.
+13. Limit slicers: Avoid high-cardinality slicers and unnecessary visual interactions.
+14. Use aggregations: Create summary tables for large datasets when appropriate.
+15. Avoid unnecessary high-cardinality columns: Columns containing unique transaction IDs can increase model size.
+Example: DAX optimization
+
+Less efficient:
+East Sales =
+CALCULATE(
+    SUM(Sales[Sales]),
+    FILTER(
+        Sales,
+        Sales[Region] = "East"
+    )
+)
+
+
+Usually simpler and more efficient:
+East Sales =
+CALCULATE(
+    SUM(Sales[Sales]),
+    Sales[Region] = "East"
+)
+
+
+How to identify performance issues:
+- Performance Analyzer: View → Performance Analyzer.
+- DAX Studio: Analyse slow DAX queries and server timings.
+- Power Query: Check whether query folding is working.
+- Model view: Check relationships and model structure.
+Official reference: 
+Microsoft Learn
+
+5. Comparison: Tableau vs Qlik Sense vs Power BI
+Area	Tableau	Qlik Sense	Power BI
+Data storage	Hyper Extract	QVD	VertiPaq / Import
+Data model	Relationships / joins	Associative model	Star schema
+Calculation optimization	Calculated fields and LOD	Set Analysis and script	DAX measures
+Data reduction	Extract filters	Script filters	Power Query
+Performance tool	Performance Recorder	App Performance Evaluation	Performance Analyzer
+Data refresh	Extract refresh	Reload script	Scheduled / Incremental refresh
+Common issue	Too many worksheets and marks	Synthetic keys and complex expressions	Complex DAX and poor relationships

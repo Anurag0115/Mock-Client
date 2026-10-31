@@ -1,0 +1,172 @@
+Power BI Project – Interview Answer (Step by Step)
+When an interviewer asks, "Tell me about your Power BI project and what activities you performed", students should explain the project from data collection to report deployment.
+
+Here is a simple, professional answer suitable for freshers and experienced candidates.
+Sample answer – Sales Performance Dashboard
+
+
+
+
+
+
+
+dev.to
+
+
+Interviewer: Explain your Power BI project step by step.
+
+
+
+"I worked on a Sales Performance Dashboard project. The main objective was to analyse sales, profit, product performance and regional performance.
+
+My responsibilities included the following activities:
+
+1. Requirement Gathering: Discussed with business users to understand KPIs, reporting requirements and dashboard expectations.
+
+2. Data Collection: Collected sales data from Excel files, SQL databases and other sources.
+
+3. Data Cleaning: Connected to the data using Power Query and removed duplicates, handled null values and corrected data types.
+
+4. Data Transformation: Merged and appended tables, created calculated columns and performed required transformations.
+
+5. Data Modelling: Created relationships between fact and dimension tables using a Star Schema.
+
+6. DAX Calculations: Created measures for Total Sales, Total Profit, Profit Margin, Quantity, Year-over-Year Growth and other KPIs.
+
+7. Report Development: Developed interactive dashboards using bar charts, line charts, cards, maps, tables and slicers.
+
+8. Filter Implementation: Implemented visual-level, page-level and report-level filters.
+
+9. Row-Level Security: Implemented RLS to restrict users' data access based on their regions.
+
+10. Performance Optimization: Optimised DAX, reduced unnecessary columns and visuals, and improved the data model.
+
+11. Testing and Validation: Compared Power BI results with source data and validated KPI calculations with business users.
+
+12. Publishing: Published reports to Power BI Service and organised them into workspaces.
+
+13. Refresh Configuration: Configured scheduled refresh and monitored refresh failures.
+
+14. Deployment and Sharing: Shared reports with authorised users and managed access permissions.
+
+Finally, I supported users and made enhancements based on business feedback."
+
+
+Short version – If interviewer asks for a 30-second answer
+"I was involved in the complete Power BI development lifecycle, starting from requirement gathering and data extraction to report deployment. I used Power Query for data cleaning and transformation, created a Star Schema data model, developed DAX measures, designed interactive dashboards, implemented Row-Level Security, optimised report performance, performed datWhen an interviewer asks, "Explain your Tableau project and what activities you performed?", students can use the following answer.
+Sample project – Sales Performance Dashboard
+
+
+
+
+
+
+
+
+
+Interviewer: Explain your Tableau project step by step.
+
+
+
+"I worked on a Sales Performance Dashboard project. The main objective was to analyse sales, profit, customer performance and regional performance.
+
+My responsibilities included the following activities:
+
+1. Requirement Gathering: Discussed with business users and collected dashboard requirements, KPIs and reporting expectations.
+
+2. Data Connection: Connected Tableau to SQL Server, Excel and CSV files.
+
+3. Data Understanding: Analysed the source tables, columns, data types and relationships.
+
+4. Data Preparation: Cleaned data, handled null values, renamed fields and changed data types.
+
+5. Data Modelling: Created relationships, joins and unions between different tables.
+
+6. Calculated Fields: Created calculated fields for Profit Margin, Sales Ratio, Year-over-Year Growth and other business metrics.
+
+7. LOD Expressions: Used FIXED, INCLUDE and EXCLUDE expressions for advanced calculations.
+
+8. Visualisation Development: Created bar charts, line charts, maps, pie charts, tables and KPI cards.
+
+9. Dashboard Development: Combined multiple worksheets into interactive dashboards.
+
+10. Filters and Parameters: Implemented context filters, dimension filters, measure filters, date filters and parameters.
+
+11. Dashboard Actions: Implemented filter actions, highlight actions, URL actions and parameter actions.
+
+12. Performance Optimization: Reduced unnecessary worksheets, optimised calculations, limited marks and used extracts where appropriate.
+
+13. Testing and Validation: Compared dashboard results with source data and validated business calculations.
+
+14. Publishing: Published workbooks and dashboards to Tableau Server or Tableau Cloud.
+
+15. Security and Permissions: Configured project permissions, user access and data-level security.
+
+16. Data Refresh: Configured extract refresh schedules and monitored refresh failures.
+
+"Finally, I supported business users and enhanced dashboards based on their feedback."
+Short version – 30-second interview answer
+"I worked on the complete Tableau development lifecycle, starting from requirement gathering and data connection to dashboard deployment. I connected Tableau to different data sources, performed data preparation, created relationships and joins, developed calculated fields and LOD expressions, built interactive visualisations and dashboards, implemented filters, parameters and dashboard actions, optimised performance, validated the results and published workbooks to Tableau Server or Tableau Cloud with appropriate permissions and extract refresh schedules."a validation, and published reports to Power BI Service with scheduled refresh."
+
+
+
+
+Qlik Sense Project – Interview Answer (Step by Step)
+When an interviewer asks, "Explain your Qlik Sense project and what activities you performed?", students can use the following answer.
+Sample project – Sales Performance Dashboard
+
+
+
+
+
+
+
+help.qlik.com
+
+
+Interviewer: Explain your Qlik Sense project step by step.
+
+Candidate:
+
+"I worked on a Sales Performance Dashboard project. The main objective was to analyse sales, profit, customer performance and regional performance.
+
+My responsibilities included the following activities:
+
+1. Requirement Gathering: Discussed with business users to understand reporting requirements, KPIs and dashboard expectations.
+
+2. Data Connection: Connected Qlik Sense to SQL Server, Excel, CSV files and other data sources.
+
+3. Data Understanding: Analysed source tables, fields, data types and business requirements.
+
+4. Data Extraction: Loaded data using Qlik Sense Load Editor and created connections to different data sources.
+
+5. Data Transformation: Used script functions such as WHERE, JOIN, CONCATENATE, RESIDENT LOAD and preceding LOAD.
+
+6. Data Modelling: Designed the associative data model and created fact and dimension tables. Removed unwanted synthetic keys and circular references.
+
+7. QVD Implementation: Created QVD files for storing reusable transformed data and improving reload performance.
+
+8. Calculated Expressions: Developed measures using aggregation functions, IF conditions and calculated dimensions.
+
+9. Set Analysis: Created expressions for current-year sales, previous-year sales, regional sales and comparative analysis.
+
+10. Visualisation Development: Created KPI objects, bar charts, line charts, pie charts, straight tables, maps and filters.
+
+11. Variables and Parameters: Used SET and LET statements, variables and dynamic dimensions to make dashboards interactive.
+
+12. Dashboard Development: Created interactive sheets with filters, alternate states, drill-down dimensions and navigation.
+
+13. Performance Optimization: Optimised load scripts, used QVDs, reduced unnecessary fields and simplified chart expressions.
+
+14. Testing and Validation: Compared dashboard results with source data and validated business calculations.
+
+15. Publishing: Published Qlik applications to Qlik Cloud or Qlik Sense Enterprise streams.
+
+16. Security: Implemented Section Access to restrict data visibility based on user access.
+
+17. Data Reload: Configured reload tasks and monitored reload failures.
+
+"Finally, I supported business users and enhanced dashboards based on their feedback."
+Short version – 30-second interview answer
+"I worked on the complete Qlik Sense development lifecycle, starting from requirement gathering and data extraction to dashboard deployment. I connected Qlik Sense to different data sources, developed load scripts, performed data transformations, created QVD files, designed the associative data model, developed chart expressions and Set Analysis, built interactive dashboards, implemented alternate states and Section Access, optimised application performance, validated data and published applications to Qlik Cloud or Qlik Sense Enterprise."
+Important Qlik Sense follow-up interview questions

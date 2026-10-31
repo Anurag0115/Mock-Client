@@ -1,0 +1,82 @@
+How to publish dashboards and reports in Power BI, Tableau and Qlik Sense
+In interviews, explain that publishing means deploying a report or dashboard from a development environment to a cloud service or server so that other users can access it with appropriate permissions.
+1. Power BI – Publish a report
+Step-by-step process
+1. Open the report in Power BI Desktop.
+2. Complete the report design and validate the data.
+3. Save the .pbix file.
+4. Sign in to Power BI Desktop using your organisational account.
+5. Select Home → Publish.
+6. Select the destination workspace.
+7. Wait for the publishing process to complete.
+8. Open Power BI Service at Power BI Service.
+9. Open the workspace and verify the report and semantic model.
+10. Configure permissions and share the report.
+How to share with users
+- Use Share to grant report access to specific users.
+- Create an App from the workspace to distribute reports to a larger audience.
+- Configure workspace roles such as Admin, Member, Contributor and Viewer.
+- Configure Row-Level Security (RLS) to restrict data access.
+Important interview points
+- .pbix is the Power BI Desktop file format.
+- Workspace is used to organise and manage reports and semantic models.
+- App is used to distribute content to business users.
+- A Power BI Pro or appropriate capacity licence may be required, depending on the sharing and workspace setup.
+
+
+
+2. Tableau – Publish a dashboard
+Step-by-step process
+1. Open the workbook in Tableau Desktop.
+2. Complete the worksheets and dashboard.
+3. Save the workbook as .twb or .twbx.
+4. Sign in to Tableau Server or Tableau Cloud.
+5. Select Server → Publish Workbook.
+6. Choose the destination project.
+7. Enter the workbook name.
+8. Configure data-source options:
+   - Live connection
+   - Extract connection
+9. Configure permissions for users and groups.
+10. Click Publish.
+11. Open Tableau Server or Cloud and verify the dashboard.
+How to share with users
+- Assign users to the appropriate site.
+- Publish the workbook to the required project.
+- Configure project and workbook permissions.
+- Assign Viewer, Explorer or Creator site roles as appropriate.
+- Configure row-level data security when required.
+Important interview points
+- .twb contains workbook definitions.
+- .twbx is a packaged workbook that can include supporting data and resources.
+- Tableau Server is generally organisation-hosted or self-managed.
+- Tableau Cloud is Tableau's hosted cloud platform.
+- Projects are used to organise published workbooks and data sources.
+3. Qlik Sense – Publish an app
+
+
+Step-by-step process – Qlik Sense Enterprise on Windows
+1. Open Qlik Sense Desktop or access the development environment.
+2. Create the application and build sheets.
+3. Reload the data.
+4. Save the application.
+5. Export the app as a .qvf file if moving it between environments.
+6. Open Qlik Management Console (QMC).
+7. Import the .qvf file if it is being deployed from another environment.
+8. Publish the app to the required Stream.
+9. Assign user access and permissions.
+10. Open Qlik Sense Hub and verify the published app.
+Step-by-step process – Qlik Cloud
+1. Open Qlik Cloud.
+2. Create or select the required space.
+3. Upload or create the app.
+4. Open the app and verify its sheets and data.
+5. Publish the app to the appropriate managed space, where applicable.
+6. Configure space and app permissions.
+7. Share the app with authorised users.
+Important interview points
+- .qvf is the Qlik Sense application file format.
+- QMC is used for administration in Qlik Sense Enterprise on Windows.
+- Streams are used to distribute published apps in the Windows client-managed environment.
+- Qlik Cloud uses spaces for organising and controlling app access.
+- Reload tasks can automate data refresh.
